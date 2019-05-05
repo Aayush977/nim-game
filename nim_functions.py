@@ -27,9 +27,7 @@ def update_dictionary(pile_choice,stick_number):
         count_number.append(len(this_dict[key]))
     print(count_number)
        
- 
-
-for __ in range(3):
+ for __ in range(3):
     count.append(asterisk * random.randint(5,15))
     
 this_dict = createHeap(name, count)
@@ -47,11 +45,13 @@ print("Here are the three piles")
 
 #assign players lists
 current_player = 0
+
 print(count_number)
+
 keep_playing = True
 while(keep_playing != False):
     print(this_dict)
-    #print(count_number)
+   
     
     
     pile_is_valid = False    
@@ -93,8 +93,9 @@ while(keep_playing != False):
        
     #Checking whether play should continue
     if (keep_playing):
-    #using XOR functions to toggle between two players
+    # using XOR functions to toggle between two players
         current_player ^= 1
         
     else:
         print("The winner is {}".format(players[current_player^1]))
+ 
